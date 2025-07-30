@@ -1,0 +1,272 @@
+/* styles.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #fdfaf6;
+    color: #3c2f2f;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Fondo de madera rústica con superposición */
+body::before {
+    content: "";
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center center/cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+/* Encabezado */
+header {
+    background-color: #5c4438cc;
+    color: #fff;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff5e6;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d4b28e;
+}
+
+/* Secciones */
+main {
+    padding: 120px 2rem 2rem 2rem;
+}
+
+section {
+    background-color: #ffffffd8;
+    margin: 2rem auto;
+    max-width: 900px;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(60, 47, 47, 0.1);
+}
+
+/* Títulos de sección */
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #5c4438;
+    border-bottom: 2px solid #d4b28e;
+    padding-bottom: 0.5rem;
+}
+
+/* Listas */
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Formulario de contacto */
+.form-container {
+    background-color: #f8f5f0;
+    padding: 2rem;
+    border: 1px solid #e0d6c9;
+    border-radius: 6px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #bfae9a;
+    border-radius: 4px;
+    font-family: 'Georgia', serif;
+    background-color: #fffaf2;
+}
+
+input:focus, textarea:focus {
+    border-color: #d4b28e;
+    outline: none;
+    background-color: #fffdf8;
+}
+
+button {
+    background-color: #8c6e5a;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a2836c;
+}
+
+/* Pie de página */
+footer {
+    background-color: #5c4438;
+    color: #fefefe;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    position: relative;
+}
+/* Estilos para la Galería de Imágenes */
+#galeria {
+  padding: 60px 20px;
+  background-color: #f4f1ea;
+  text-align: center;
+      cursor: pointer;
+
+}
+
+#galeria h2 {
+  font-size: 2rem;
+  color: #4e342e;
+  margin-bottom: 30px;
+}
+
+.galeria-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.galeria-contenedor img {
+    cursor: pointer;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.galeria-contenedor img:hover {
+  transform: scale(1.05);
+}
+/* Tabla de precios */
+.tabla-precios {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background-color: #fffaf2;
+  box-shadow: 0 2px 8px rgba(60, 47, 47, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabla-precios thead {
+  background-color: #d4b28e;
+  color: #3c2f2f;
+}
+
+.tabla-precios th,
+.tabla-precios td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #e8dccc;
+}
+
+.tabla-precios img.img-precio {
+  width: 100px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.tabla-precios tr:hover {
+  background-color: #fdf5ea;
+}
+section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Animación al cargar el menú */
+nav ul li {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideFade 0.6s forwards;
+}
+
+nav ul li:nth-child(1) { animation-delay: 0.1s; }
+nav ul li:nth-child(2) { animation-delay: 0.2s; }
+nav ul li:nth-child(3) { animation-delay: 0.3s; }
+nav ul li:nth-child(4) { animation-delay: 0.4s; }
+nav ul li:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto al pasar el mouse por los enlaces del menú */
+nav a {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #d4b28e;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
