@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Landing page elegante con fondo fijo y desplazamiento interactivo." />
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <title>Landing Page</title>
+</head>
+<body>
+  <!-- Encabezado con navegación y logo -->
+  <header>
+    <div class="logo">
+      <span>Explora la Elegancia</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section id="inicio">
+      <h2>Bienvenidos</h2>
+      <img src="hotel por fuera.jpg">
+      <p>Descubre una experiencia inolvidable, donde el confort, la elegancia y la innovación se fusionan para brindarte momentos únicos.</p>
+    </section>
+
+    <section id="sobre-nosotros">
+      <h2>Sobre Nosotros</h2>
+      <img src="familas.jpg">
+      <p>Nos apasiona crear ambientes que inspiran. Diseñamos cada espacio con exclusividad, buen gusto y un enfoque en el detalle, ofreciendo un servicio cálido y personalizado.</p>
+    </section>
+
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <ul>
+        <li>Diseño y lujo en cada rincón.</li>
+        <img src="hotel por fuera2.jpg">
+        <li>Ambientes pensados para tu descanso y bienestar.</li>
+        <img src="zona de descanso.jpg">
+        <li>Atención personalizada las 24 horas, todos los días.</li>
+        <img src="atencion al cliente.jpg"
+      </ul>
+    </section>
+
+     <!-- Sección Galería -->
+    <section id="galeria">
+      <h2>Galería de Imágenes</h2>
+      <div class="galeria-contenedor">
+        <img src="habitacion1.jpg" alt="Habitación rústica con decoración elegante" />
+        <img src="habitacion2.jpg" alt="Vista panorámica desde la suite" />
+        <img src="spa.jpg" alt="Área de spa y relajación" />
+        <img src="restaurante.jpg" alt="Restaurante gourmet del hotel" />
+      </div>    
+
+      </div>
+    </section>
+
+  <section id="precios">
+  <h2>Precios</h2>
+
+  <table class="tabla-precios">
+    <thead>
+      <tr>
+        <th>Imagen</th>
+        <th>Tipo de Habitación</th>
+        <th>Número de Personas</th>
+        <th>Precio por Noche</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="habitacion individual1.jpg" alt="Habitación Individual" class="img-precio" /></td>
+        <td>Habitación Individual</td>
+        <td>1</td>
+        <td>$90.000</td>
+      </tr>
+      <tr>
+        <td><img src="habitacion doble,jpg.webp" alt="Habitación Doble" class="img-precio" /></td>
+        <td>Habitación Doble</td>
+        <td>2</td>
+        <td>$100.000</td>
+      </tr>
+      <tr>
+        <td><img src="habitacion familiar.jpg" alt="Habitación Familiar" class="img-precio" /></td>
+        <td>Habitación Familiar</td>
+        <td>4</td>
+        <td>$150.000</td>
+      </tr>
+      <tr>
+        <td><img src="suite.jpg" alt="Suite de lujo" class="img-precio" /></td>
+        <td>Suite</td>
+        <td>2</td>
+        <td>$300.000</td>
+      </tr>
+    </tbody>
+  </table>
+
+   <section id="contacto">
+  <div class="form-container">
+    <h2>Contáctanos</h2>
+    <form action="mailto:eldarkar995@gmail.com" method="post" enctype="text/plain">
+      <input type="text" id="nombre" placeholder="Nombre" required>
+      <input type="email" id="email" placeholder="Correo" required>
+      <textarea placeholder="Mensaje"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Elegancia. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script de scroll suave (insertado correctamente) -->
+  <script>
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        window.scrollTo({
+          top: targetSection.offsetTop - 60,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
