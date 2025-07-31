@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Dancing+Script:wght@600&display=swap');
+
+body {
+    font-family: 'Dancing Script', cursive;
+    background-color: #fdfaf6;
+    margin: 0;
+    padding: 0;
+    color: #3c2f2f;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center center/cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.12;
+    z-index: -1;
+}
+
+header {
+    background-color: rgba(92, 68, 56, 0.9);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-family: 'Dancing Script', cursive;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fffaf2;
+    box-shadow: 0 2px 8px rgba(60, 47, 47, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Dancing Script', cursive;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e8dccc;
+}
+
+table th {
+    background-color: #d4b28e;
+    color: #3c2f2f;
+}
+
+table tr:nth-child(even) {
+    background-color: #fdf5ea;
+}
+
+button {
+    background-color: #8c6e5a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Dancing Script', cursive;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a2836c;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+form {
+    background-color: #f8f5f0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(60, 47, 47, 0.1);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Dancing Script', cursive;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #bfae9a;
+    border-radius: 6px;
+    background-color: #fffaf2;
+    font-family: 'Dancing Script', cursive;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    background-color: #8c6e5a;
+}
+
+form button[type="button"] {
+    background-color: #f44336;
+}
+
+form button[type="button"]:hover {
+    background-color: #e53935;
+}
+
+form button:hover {
+    background-color: #a2836c;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-group button {
+    background-color: #8c6e5a;
+    color: white;
+}
+
+.btn-group button:hover {
+    background-color: #a2836c;
+}
+
+.alert {
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+}
+
+.alert.success {
+    background-color: #8c6e5a;
+    color: white;
+}
+
+.alert.error {
+    background-color: #f44336;
+    color: white;
+}
+
+form.update-form {
+    background-color: #f8f5f0;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(60, 47, 47, 0.1);
+    font-family: 'Dancing Script', cursive;
+}
+
+.update-form input,
+.update-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #bfae9a;
+    border-radius: 6px;
+    background-color: #fffaf2;
+}
+
+.update-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #8c6e5a;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.update-form button:hover {
+    background-color: #a2836c;
+}
+
+.update-form button[type="button"] {
+    background-color: #f44336;
+}
+
+.update-form button[type="button"]:hover {
+    background-color: #e53935;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+}
