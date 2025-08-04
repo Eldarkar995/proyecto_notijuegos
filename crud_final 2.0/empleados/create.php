@@ -1,40 +1,32 @@
-<?php
+    //create.php
+    <?php
+    // Archivo: create.php
+    require 'db.php'; // Incluir conexión a la base de datos
 
-require 'db.php'; 
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // Sanitizar los datos del formulario
+        $nombre = mysqli_real_escape_string($conn, $_POST['nombre']);
+        $apellido = mysqli_real_escape_string($conn, $_POST['apellido']);
+        $telefono = mysqli_real_escape_string($conn, $_POST['telefono']);
+        $correo = mysqli_real_escape_string($conn, $_POST['correo']);
+        $fecha_entrada = $_POST['fecha_entrada'];
+        $fecha_salida = $_POST['fecha_salida'];
+        $salario = floatval($_POST['salario']);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Consulta SQL para insertar los datos
+         $sql = "INSERT INTO empleados (nombre, apellido, telefono, correo, fecha_entrada, fecha_salida, salario) 
+                VALUES ('$nombre', '$apellido', '$telefono', '$correo', '$fecha_entrada', '$fecha_salida', '$salario')";
 
-   
-    $nombre = mysqli_real_escape_string($conn, $_POST['nombre']);
-    $tipo_doc = mysqli_real_escape_string($conn, $_POST['tipo_doc']);
-    $num_doc = mysqli_real_escape_string($conn, $_POST['num_doc']);
-    $ciudad = mysqli_real_escape_string($conn, $_POST['ciudad']);
-    $direccion = mysqli_real_escape_string($conn, $_POST['direccion']);
-    $telefono = mysqli_real_escape_string($conn, $_POST['telefono']);
-    $correo  = mysqli_real_escape_string($conn, $_POST['correo']);
-    $fecha_entrada = mysqli_real_escape_string($conn, $_POST['fecha_entrada']);
-    $fecha_salida = mysqli_real_escape_string($conn, $_POST['fecha_salida']);
-    $concepto = floatval($_POST['concepto']);
-    $valor_noche = floatval($_POST['valor_noche']);
-    $total = floatval($_POST['total']);
-
-    
-    $sql = "INSERT INTO facturacion 
-            (nombre, tipo_doc, num_doc, ciudad, direccion, telefono, correo, fecha_entrada, fecha_salida, concepto, valor_noche, total) 
-            VALUES 
-            ('$nombre', '$tipo_doc', '$num_doc', '$ciudad', '$direccion', '$telefono', '$correo', '$fecha_entrada', '$fecha_salida', '$concepto', '$valor_noche', '$total')";
-
-    
-    if (mysqli_query($conn, $sql)) {
-       
-        header('Location: index.php?mensaje=factura registrada exitosamente');
-        exit;
-    } else {
-       
-        echo "Error al registrar: " . mysqli_error($conn);
+        // Ejecutar la consulta
+        if (mysqli_query($conn, $sql)) {
+            echo json_encode(['status' => 'success', 'message' => 'empleados registrado exitosamente']);
+            header('Location: index.php?mensaje=empleados registrado exitosamente');
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Error al registrar: ' . mysqli_error($conn)]);
+        }
     }
-}
 
-
-mysqli_close($conn);
-?>
+    // Cerrar la conexión
+    mysqli_close($conn);
+    ?>
+        

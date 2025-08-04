@@ -9,7 +9,7 @@ if (isset($_GET['delete_id'])) {
     if (mysqli_query($conn, $delete_query)) {
         header("Location: index.php?mensaje=¡empleados eliminada exitosamente!");
     } else {
-        echo "Error al eliminar la reservación: " . mysqli_error($conn);
+        echo "Error al eliminar la empleados: " . mysqli_error($conn);
     }
 }
 ?>

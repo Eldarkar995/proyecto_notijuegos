@@ -12,7 +12,7 @@ if (isset($_POST['update'])) {
     $update_fecha_salida = $_POST['update_fecha_salida'];
     $update_salario = $_POST['update_salario'];
 
-    $update_query = "UPDATE reservaciones SET 
+    $update_query = "UPDATE empleados SET 
                     nombre = '$update_nombre', 
                     apellido = '$update_apellido', 
                     telefono = '$update_telefono', 
@@ -23,9 +23,9 @@ if (isset($_POST['update'])) {
                     WHERE id = $update_id";
 
     if (mysqli_query($conn, $update_query)) {
-        header("Location: index.php?mensaje=¡empleado actualizada exitosamente!");
+        header("Location: index.php?mensaje=¡empleados actualizada exitosamente!");
     } else {
-        echo "Error al actualizar la reservación: " . mysqli_error($conn);
+        echo "Error al actualizar empleados: " . mysqli_error($conn);
     }
 }
 ?>

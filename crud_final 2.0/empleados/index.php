@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>empleado</title>
+    <title>CRUD de empleados</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <div class="container">
-    <h2>Crear Nueva empleado</h2>
+    <h2>Formulario De Empleados</h2>
     <form action="create.php" method="POST" onsubmit="return validarFormulario()">
         <input type="text" name="nombre" placeholder="Nombre" required>
         <input type="text" name="apellido" placeholder="Apellido" required>
@@ -20,7 +20,7 @@
         <button type="submit">Cargar</button>
     </form>
 
-    <h2>empleados Existentes</h2>
+    <h2>Empleados Existentes</h2>
     <table>
         <tr>
             <th>ID</th>
