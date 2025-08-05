@@ -1,0 +1,163 @@
+/* estilos.css */
+
+/* Fuente general y fondo */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffdeb;
+    color: #333;
+}
+.btn-inicio {
+  display: inline-block;
+  background-color: #d96c6c;  /* mismo rojo suave de tus botones */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-inicio:hover {
+  background-color: #c75b5b;  /* rojo un poco más oscuro al pasar el mouse */
+}
+
+
+/* Encabezado general */
+header {
+    background-color: #d96b6b;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-shadow: 2px 2px 5px #8a3c3c;
+}
+
+/* Menú de navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de iniciar sesión */
+.boton-login {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: #ffdd00;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.boton-login:hover {
+    background-color: #ffc107;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #fffdeb;
+    padding: 20px;
+    margin: 2em auto;
+    width: 90%;
+    max-width: 800px; /* Para que el inventario tenga espacio */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+/* Títulos */
+h2 {
+    color: #d96b6b;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/* Estilo de formularios */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+input[type="submit"], button {
+    background-color: #d96b6b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #c65353;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #c65353;
+  color: white;
+}
+
+button {
+  padding: 6px 10px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contenedor-tabla {
+  background-color: #fffdeb;   /* fondo beige */
+  padding: 40px 30px;          /* espacio interno amplio */
+  margin: 30px auto;           /* margen para separación */
+  border-radius: 12px;         /* bordes redondeados */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* sombra suave para "elevar" */
+  max-width: 95%;              /* ajustable al ancho de la pantalla */
+  border: 1px solid #ccc;      /* borde sutil */
+}
+
+
+.datos {
+  text-align: center; /* Centra el texto dentro del contenedor */
+}

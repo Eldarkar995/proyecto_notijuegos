@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Landing page elegante con fondo fijo y desplazamiento interactivo." />
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <title>Landing Page</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span>Explora la Elegancia</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#reservas">reservas</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Bienvenidos</h2>
+      <img src="hotel por fuera.jpg" alt="Hotel por fuera" />
+      <p>Descubre una experiencia inolvidable, donde el confort,<br> la elegancia y la innovación se fusionan para brindarte momentos únicos.</p>
+    </section>
+
+    <section id="sobre-nosotros">
+      <h2>Sobre Nosotros</h2>
+      <img src="familas.jpg" alt="Familias felices en el hotel" />
+      <p>Nos apasiona crear ambientes que inspiran. 
+        Diseñamos cada espacio con exclusividad, <br>
+        buen gusto y un enfoque en el detalle, 
+        ofreciendo un servicio cálido y personalizado.</p>
+    </section>
+
+    <section id="servicios">
+      <h2>Servicios</h2>
+        <div class ="servicio_contenedor">
+
+          <div class ="servicio-item">
+            <p>Diseño y lujo en cada rincón.</p>
+            <img src="hotel por fuera2.jpg" alt="Diseño lujoso" />
+          </div>
+
+          <div class = "servicio-item">
+            <p>Ambientes pensados para tu descanso y bienestar.</p>
+            <img src="zona de descanso.jpg" alt="Zona de descanso" />
+          </div>
+
+          <div class = "servicio-item">
+            <p>Atención personalizada las 24 horas, todos los días.</p>
+            <img src="atencion al cliente.jpg" alt="Atención al cliente" />
+        </div>
+
+      <div>
+    </section>
+
+    <section id="galeria">
+      <h2>Galeria de Imagenes</h2>
+      <div class="galeria-contenedor">
+        <img src="habitacion1.jpg" alt="Habitacion rustica con decoracion elegante" />
+        <img src="habitacion2.jpg" alt="Vista panoramica desde la suite" />
+        <img src="spa.jpg" alt="Area de spa y relajacion" />
+        <img src="restaurante.jpg" alt="Restaurante gourmet del hotel" />
+        <img src="teatro.jpg" alt= "teatro lujoso" />
+        <img src="cancha.jpg" alt="cancha" />
+      </div>
+    </section>
+
+    <section id="precios">
+      <h2>Precios</h2>
+      <table class="tabla-precios">
+        <thead>
+          <tr>
+            <th>Imagen</th>
+            <th>Tipo de Habitación</th>
+            <th>Número de Personas</th>
+            <th>Precio por Noche</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="habitacion individual1.jpg" alt="Habitación Individual" class="img-precio" /></td>
+            <td>Habitación Individual</td>
+            <td>1</td>
+            <td>$90.000</td>
+          </tr>
+          <tr>
+            <td><img src="habitacion doble,jpg.webp" alt="Habitación Doble" class="img-precio" /></td>
+            <td>Habitación Doble</td>
+            <td>2</td>
+            <td>$100.000</td>
+          </tr>
+          <tr>
+            <td><img src="habitacion familiar.jpg" alt="Habitación Familiar" class="img-precio" /></td>
+            <td>Habitación Familiar</td>
+            <td>4</td>
+            <td>$150.000</td>
+          </tr>
+          <tr>
+            <td><img src="suite.jpg" alt="Suite de lujo" class="img-precio" /></td>
+            <td>Suite</td>
+            <td>2</td>
+            <td>$300.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="reservas" class="reservas">
+  <h2 class="titulo-animado">Reservas</h2>
+  <p class="texto-animado">Consulta nuestras promociones y realiza tu reservación ahora.</p>
+  <div style="text-align:center; margin-top: 20px;">
+    <a href="reservaciones/index.php" class="boton-reserva">Ir al Panel de Reservas</a>
+  </div>
+</section>
+
+    <section id="contacto">
+      <div class="form-container">
+        <h2>Contáctanos</h2>
+        <form action="mailto:eldarkar995@gmail.com" method="post" enctype="text/plain">
+          <input type="text" id="nombre" placeholder="Nombre" required />
+          <input type="email" id="email" placeholder="Correo" required />
+          <textarea placeholder="Mensaje"></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+  <footer>
+    <p>&copy; 2025 Elegancia. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop - 60,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
