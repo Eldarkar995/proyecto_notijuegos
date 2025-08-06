@@ -9,12 +9,11 @@
                     <td>{$row['cantidad']}</td>
                     <td>{$row['fecha_entrada']}</td>
                     <td>{$row['fecha_salida']}</td>
-                    <td>{$row['seri']}</td>
+                    <td>{$row['serial']}</td>
                     <td>{$row['precio']}</td>
-                    <td>{$row['observaciones']}</td>
                     <td>
                         <button onclick='eliminarinventario({$row['id']})'>Eliminar</button>
-                        <button onclick='mostrarFormularioActualizar({$row['id']}, \"{$row['nombre']}\", \"{$row['cantidad']}\", \"{$row['fecha_entrada']}\", \"{$row['fecha_salida']}\", \"{$row['precio']}\", \"{$row['observaciones']}\")'>Actualizar</button>
+                        <button onclick='mostrarFormularioActualizar({$row['id']}, \"{$row['nombre']}\", \"{$row['cantidad']}\", \"{$row['fecha_entrada']}\", \"{$row['fecha_salida']}\", \"{$row['serial']}\", \"{$row['precio']}\")'>Actualizar</button>
                     </td>
                 </tr>";
         }

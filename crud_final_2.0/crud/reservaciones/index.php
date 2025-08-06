@@ -6,7 +6,7 @@
     <title>CRUD de Reservaciones</title>
     <link rel="stylesheet" href="css/styles.css">
     <div class="boton-inicio">
-         <a class="fcc-btn" href="crud_final_2.0/main.php">Inicio</a>  
+         <a class="fcc-btn" href="../../main.php">Inicio</a>  
     </div>
 </head>
 <body>

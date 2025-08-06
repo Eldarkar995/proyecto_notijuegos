@@ -110,13 +110,43 @@ form textarea:focus {
   outline: none;
 }
 
-form.update-form button[type="button"] {
-  background-color: #a04040;
+/* ---------- NUEVOS AJUSTES ---------- */
+
+/* 1. Área principal: centrado y respiración */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem;
 }
 
-form.update-form button[type="button"]:hover {
-  background-color: #823636;
+/* 2. Botones de acciones específicas (Update / Cancelar) */
+form.update-form button[type="button"] {
+    background-color: #d65a00;       /* naranja cálido, sin rojos */
 }
+form.update-form button[type="button"]:hover {
+    background-color: #b55000;       /* tono más oscuro al pasar el ratón */
+}
+
+/* 3. Alertas */
+.alert.success {
+    background-color: #5c9c5c;       /* verde éxito (se mantiene) */
+}
+.alert.error {
+    background-color: #d65a00;       /* reemplaza rojo por naranja */
+}
+
+/* 4. Ajuste sutil de espacio en inputs y tablas */
+form input,
+form select,
+form textarea {
+    margin-bottom: 1.25rem;          /* un poco más de aire */
+}
+
+table th,
+table td {
+    padding: 1.25rem;               /* cohorte con nuevos márgenes */
+}
+/* ---------- FIN AJUSTES ---------- */
 
 .btn-group {
   display: flex;

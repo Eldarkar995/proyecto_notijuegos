@@ -428,13 +428,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register-submit'])) {
     </section>
 
      <!-- Sección Galería -->
-    <section id="galeria">
+  <section id="galeria">
       <h2>Galería de Imágenes</h2>
       <div class="galeria-contenedor">
         <img src="imagines/habitacion1.jpg" alt="Habitación rústica con decoración elegante" />
         <img src="imagines/habitacion2.jpg" alt="Vista panorámica desde la suite" />
         <img src="imagines/spa.jpg" alt="Área de spa y relajación" />
-        <img src="imagines/estaurante.jpg" alt="Restaurante gourmet del hotel" />
+        <img src="imagines/restaurante.jpg" alt="Restaurante gourmet del hotel" />
+        <img src="imagines/teatro.jpg" alt="teatro del hotel" />
+        <img src="imagines/cancha.jpg" alt="cancha de futbol" />
       </div>    
     </section>
 
