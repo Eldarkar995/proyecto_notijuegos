@@ -49,7 +49,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Mi Perfil</title>
+    <!-- dentro de <head> -->
     <link rel="stylesheet" href="css/styles.css">
+    {{ edit_1 }}
+    <link rel="stylesheet" href="css/profile.css"> <!-- nuevo -->
     <style>
         .profile-container{max-width:400px;margin:40px auto;padding:20px;border:1px solid #ccc;border-radius:8px;}
         .profile-container h2{text-align:center;margin-bottom:20px;}

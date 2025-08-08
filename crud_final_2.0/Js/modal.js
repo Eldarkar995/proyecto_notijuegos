@@ -1,11 +1,11 @@
 
 // Scroll suave
-document.querySelectorAll('nav ul li a').forEach(link => {
+document.querySelectorAll('nav ul li a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
-
+        if (!targetSection) return; // seguridad
         window.scrollTo({
             top: targetSection.offsetTop - 60,
             behavior: 'smooth'
